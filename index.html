@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Programming Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <a href="#Introduction" class="nav-link">Introduction</a>
+      <a href="#Getting_Started" class="nav-link">Getting Started</a>
+      <a href="#Data_Types" class="nav-link">Data Types</a>
+      <a href="#Control_Flow" class="nav-link">Control Flow</a>
+      <a href="#Functions" class="nav-link">Functions</a>
+      <a href="#Lists_and_Dictionaries" class="nav-link"
+        >Lists and Dictionaries</a
+      >
+      <a href="#Modules_and_Packages" class="nav-link">Modules and Packages</a>
+      <a href="#Exception_Handling" class="nav-link">Exception Handling</a>
+      <a href="#File_Operations" class="nav-link">File Operations</a>
+      <a href="#Object_Oriented_Programming" class="nav-link"
+        >Object Oriented Programming</a
+      >
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          Python is a high-level, interpreted programming language known for its
+          readability and simplicity. Created by Guido van Rossum and first
+          released in 1991, Python has a design philosophy that emphasizes code
+          readability with its notable use of significant whitespace.
+        </p>
+        <p>
+          Python is dynamically typed and garbage-collected. It supports
+          multiple programming paradigms, including structured, object-oriented,
+          and functional programming.
+        </p>
+        <p>
+          Python is often described as a "batteries included" language due to
+          its comprehensive standard library, which covers everything from
+          asynchronous processing to zip files.
+        </p>
+        <code
+          >print("Hello, World!") # A simple Hello World program in Python</code
+        >
+      </section>
+
+      <section class="main-section" id="Getting_Started">
+        <header>Getting Started</header>
+        <p>
+          To begin programming in Python, you need to install the Python
+          interpreter on your computer. Visit the official Python website at
+          python.org to download the latest version for your operating system.
+        </p>
+        <p>
+          After installation, you can run Python in interactive mode by typing
+          'python' in your terminal or command prompt. This opens the Python
+          shell where you can execute commands directly.
+        </p>
+        <p>
+          Alternatively, you can write Python code in a text file with a .py
+          extension and run it with the Python interpreter.
+        </p>
+        <code>
+          # Save this as hello.py print("Hello, Python beginners!") # Run it
+          using: # python hello.py
+        </code>
+        <p>
+          There are also several Integrated Development Environments (IDEs)
+          available for Python development, such as:
+        </p>
+        <ul>
+          <li>
+            PyCharm - A full-featured IDE with code analysis and debugging tools
+          </li>
+          <li>
+            Visual Studio Code - A lightweight but powerful editor with Python
+            extensions
+          </li>
+          <li>
+            Jupyter Notebook - Perfect for data science and interactive
+            computing
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <p>
+          Python has several built-in data types that are classified into
+          mutable and immutable types.
+        </p>
+        <p>Immutable data types include:</p>
+        <ul>
+          <li>Integers (int): Whole numbers without decimal points</li>
+          <li>Floating-point numbers (float): Numbers with decimal points</li>
+          <li>Strings (str): Sequences of characters</li>
+          <li>Tuples: Ordered, immutable collections of elements</li>
+          <li>Boolean (bool): Represents True or False values</li>
+        </ul>
+        <p>Mutable data types include:</p>
+        <ul>
+          <li>Lists: Ordered, mutable collections of elements</li>
+          <li>Dictionaries: Key-value pairs</li>
+          <li>Sets: Unordered collections of unique elements</li>
+        </ul>
+        <code>
+          # Examples of different data types an_integer = 42 a_float = 3.14159
+          a_string = "Hello, Python!" a_boolean = True a_list = [1, 2, 3, 4, 5]
+          a_tuple = (1, "two", 3.0) a_dictionary = {"name": "John", "age": 30}
+          a_set = {1, 2, 3, 4, 5}
+        </code>
+      </section>
+
+      <section class="main-section" id="Control_Flow">
+        <header>Control Flow</header>
+        <p>
+          Control flow statements determine the order in which the code
+          executes. Python provides several control flow structures:
+        </p>
+        <p>
+          Conditional statements allow you to execute code blocks based on
+          certain conditions:
+        </p>
+        <code>
+          # If-else statement x = 10 if x > 5: print("x is greater than 5") elif
+          x == 5: print("x is equal to 5") else: print("x is less than 5")
+        </code>
+        <p>Loops enable you to execute a block of code multiple times:</p>
+        <code>
+          # For loop for i in range(5): print(i) # Prints 0, 1, 2, 3, 4 # While
+          loop count = 0 while count < 5: print(count) count += 1 # Increment
+          count
+        </code>
+        <p>
+          Python also supports 'break' and 'continue' statements to control the
+          loop execution:
+        </p>
+        <ul>
+          <li>'break' terminates the loop entirely</li>
+          <li>
+            'continue' skips the current iteration and moves to the next one
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p>
+          Functions are blocks of reusable code designed to perform a specific
+          task. They help in organizing code, making it more modular and
+          maintainable.
+        </p>
+        <p>
+          In Python, you define a function using the 'def' keyword, followed by
+          the function name and parameters:
+        </p>
+        <code>
+          # Defining a simple function def greet(name): return f"Hello, {name}!"
+          # Calling the function message = greet("Alice") print(message) #
+          Outputs: Hello, Alice!
+        </code>
+        <p>Python functions can have default parameter values:</p>
+        <code>
+          # Function with default parameter def power(base, exponent=2): return
+          base ** exponent print(power(3)) # 3^2 = 9 print(power(3, 3)) # 3^3 =
+          27
+        </code>
+        <p>Functions can also accept a variable number of arguments:</p>
+        <ul>
+          <li>
+            *args: Allows passing a variable number of positional arguments
+          </li>
+          <li>
+            **kwargs: Allows passing a variable number of keyword arguments
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Lists_and_Dictionaries">
+        <header>Lists and Dictionaries</header>
+        <p>
+          Lists and dictionaries are two of the most commonly used data
+          structures in Python.
+        </p>
+        <p>
+          Lists are ordered, mutable collections that can store elements of
+          different types:
+        </p>
+        <code>
+          # Creating and manipulating lists fruits = ["apple", "banana",
+          "cherry"] fruits.append("orange") # Add an item fruits.insert(1,
+          "blueberry") # Insert at position removed_fruit = fruits.pop() #
+          Remove and return the last item print(fruits) # ['apple', 'blueberry',
+          'banana', 'cherry']
+        </code>
+        <p>You can access list elements using indexing and slicing:</p>
+        <code>
+          numbers = [0, 1, 2, 3, 4, 5] print(numbers[0]) # First element: 0
+          print(numbers[-1]) # Last element: 5 print(numbers[1:4]) # Slice: [1,
+          2, 3] print(numbers[::2]) # Every second element: [0, 2, 4]
+        </code>
+        <p>Dictionaries are collections of key-value pairs:</p>
+        <code>
+          # Creating and using dictionaries person = { "name": "John Doe",
+          "age": 30, "profession": "Developer" } # Accessing values
+          print(person["name"]) # John Doe # Adding or modifying entries
+          person["email"] = "john@example.com" person["age"] = 31 # Dictionary
+          methods keys = person.keys() values = person.values() items =
+          person.items() # Returns (key, value) pairs
+        </code>
+      </section>
+
+      <section class="main-section" id="Modules_and_Packages">
+        <header>Modules and Packages</header>
+        <p>
+          Python's modular approach allows you to organize code into modules and
+          packages for better maintainability and reusability.
+        </p>
+        <p>
+          A module is a Python file containing functions, classes, and variables
+          that you can import into your program.
+        </p>
+        <code>
+          # Importing modules import math print(math.sqrt(16)) # 4.0 # Importing
+          specific functions from random import randint print(randint(1, 10)) #
+          Random number between 1 and 10 # Aliasing modules import datetime as
+          dt current_time = dt.datetime.now()
+        </code>
+        <p>
+          A package is a directory containing multiple module files and a
+          special __init__.py file (optional in Python 3.3+) that indicates the
+          directory is a Python package.
+        </p>
+        <p>
+          The Python Standard Library provides numerous built-in modules for
+          various tasks:
+        </p>
+        <ul>
+          <li>os and sys: For operating system interactions</li>
+          <li>datetime: For date and time operations</li>
+          <li>math: For mathematical operations</li>
+          <li>json: For JSON parsing and serialization</li>
+          <li>re: For regular expressions</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Exception_Handling">
+        <header>Exception Handling</header>
+        <p>
+          Exception handling allows you to manage errors that occur during
+          program execution gracefully.
+        </p>
+        <p>
+          Python uses try, except, else, and finally blocks for exception
+          handling:
+        </p>
+        <code>
+          # Basic exception handling try: result = 10 / 0 except
+          ZeroDivisionError: print("Error: Division by zero!") else: # Executed
+          if no exception occurs print("Division successful!") finally: # Always
+          executed, regardless of exceptions print("This always runs")
+        </code>
+        <p>You can catch multiple exceptions:</p>
+        <code>
+          try: num = int(input("Enter a number: ")) result = 100 / num except
+          ValueError: print("Invalid input! Please enter a number.") except
+          ZeroDivisionError: print("Cannot divide by zero!") except Exception as
+          e: print(f"An unexpected error occurred: {e}")
+        </code>
+        <p>
+          Python allows you to raise custom exceptions using the 'raise'
+          statement:
+        </p>
+        <code>
+          def validate_age(age): if age < 0: raise ValueError("Age cannot be
+          negative") if age > 120: raise ValueError("Age seems too high") return
+          age
+        </code>
+      </section>
+
+      <section class="main-section" id="File_Operations">
+        <header>File Operations</header>
+        <p>
+          Python provides built-in functions for file operations, allowing you
+          to read from and write to files easily.
+        </p>
+        <p>Opening and reading a file:</p>
+        <code>
+          # Reading a file with open('example.txt', 'r') as file: content =
+          file.read() print(content) # Reading line by line with
+          open('example.txt', 'r') as file: for line in file:
+          print(line.strip())
+        </code>
+        <p>Writing to a file:</p>
+        <code>
+          # Writing to a file with open('output.txt', 'w') as file:
+          file.write("Hello, File I/O!") # Appending to a file with
+          open('output.txt', 'a') as file: file.write("\nAppending more text.")
+        </code>
+        <p>
+          The 'with' statement ensures the file is properly closed after the
+          operations are completed, even if an exception occurs.
+        </p>
+        <p>
+          Python also supports working with different file formats through
+          specialized modules:
+        </p>
+        <ul>
+          <li>csv: For CSV files</li>
+          <li>json: For JSON files</li>
+          <li>pickle: For serializing and deserializing Python objects</li>
+          <li>xml: For XML parsing</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Object_Oriented_Programming">
+        <header>Object Oriented Programming</header>
+        <p>
+          Python is an object-oriented programming language that supports
+          concepts like classes, objects, inheritance, and polymorphism.
+        </p>
+        <p>
+          A class is a blueprint for creating objects, and it defines attributes
+          and methods that characterize any object of the class:
+        </p>
+        <code>
+          # Defining a class class Dog: # Class attribute species = "Canis
+          familiaris" # Initializer / Constructor def __init__(self, name, age):
+          self.name = name # Instance attribute self.age = age # Instance
+          attribute # Instance method def bark(self): return "Woof!" # Another
+          instance method def __str__(self): return f"{self.name} is {self.age}
+          years old" # Creating objects from the class buddy = Dog("Buddy", 5)
+          max = Dog("Max", 3) print(buddy.bark()) # Outputs: Woof! print(max) #
+          Outputs: Max is 3 years old
+        </code>
+        <p>
+          Inheritance allows a class to inherit attributes and methods from
+          another class:
+        </p>
+        <code>
+          # Parent class class Animal: def __init__(self, name): self.name =
+          name def speak(self): pass # To be overridden by subclasses # Child
+          class class Cat(Animal): def speak(self): return "Meow!" # Another
+          child class class Dog(Animal): def speak(self): return "Woof!" #
+          Creating objects fluffy = Cat("Fluffy") rover = Dog("Rover")
+          print(fluffy.name, fluffy.speak()) # Fluffy Meow! print(rover.name,
+          rover.speak()) # Rover Woof!
+        </code>
+        <p>
+          Polymorphism allows methods to behave differently based on the object
+          that calls them. In the example above, the speak() method behaves
+          differently depending on whether it's called by a Cat or Dog object.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
